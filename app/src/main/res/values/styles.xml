@@ -39,20 +39,42 @@
         <item name="android:windowContentTransitions">true</item>
     </style>
 
-    <style name="AppTheme.RecordTitle">
+    <style name="AppTheme.SoundTitle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">16dp</item>
         <item name="android:layout_marginRight">16dp</item>
         <item name="android:layout_marginBottom">24dp</item>
         <item name="android:layout_marginLeft">16dp</item>
-        <item name="android:textColor">@color/icon</item>
+        <item name="android:textColor">@color/screen</item>
         <item name="android:textSize">18sp</item>
         <item name="android:maxLines">1</item>
         <item name="android:layout_alignParentBottom">true</item>
     </style>
 
-    <style name="AppTheme.RecordFab">
+    <style name="AppTheme.ScreenTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginBottom">24dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+
+    <style name="AppTheme.SoundFab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:stateListAnimator">@animator/lift_on_touch</item>
+        <item name="backgroundTint">@color/screen</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="AppTheme.ScreenFab">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">16dp</item>

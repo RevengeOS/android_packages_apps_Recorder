@@ -56,7 +56,7 @@
         android:id="@+id/main_sound_layout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/sound"
+        android:background="@color/white"
         app:layout_constraintHeight_default="percent"
         app:layout_constraintHeight_percent="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -64,11 +64,11 @@
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/sound_fab"
-            style="@style/AppTheme.RecordFab"
+            style="@style/AppTheme.SoundFab"
             android:src="@drawable/ic_action_sound_record" />
 
         <TextView
-            style="@style/AppTheme.RecordTitle"
+            style="@style/AppTheme.SoundTitle"
             android:text="@string/main_sound_action" />
 
         <ImageView
@@ -95,11 +95,11 @@
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/screen_fab"
-            style="@style/AppTheme.RecordFab"
+            style="@style/AppTheme.ScreenFab"
             android:src="@drawable/ic_action_screen_record" />
 
         <TextView
-            style="@style/AppTheme.RecordTitle"
+            style="@style/AppTheme.ScreenTitle"
             android:text="@string/main_screen_action" />
 
         <LinearLayout
