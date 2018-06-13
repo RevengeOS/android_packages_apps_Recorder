@@ -23,5 +23,5 @@
 
     <color name="screen">#ff0550</color>
     <color name="sound">#fafafa</color>
-    <color name="icon">#56000000</color>
+    <color name="icon">#ff0550</color>
 </resources>
