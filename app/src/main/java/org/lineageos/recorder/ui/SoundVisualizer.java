@@ -80,7 +80,7 @@ public class SoundVisualizer extends LinearLayout implements OnAudioLevelUpdated
             view.setLayoutParams(new ViewGroup.LayoutParams(mBubbleRadius, mBubbleRadius));
 
             GradientDrawable drawable = new GradientDrawable();
-            drawable.setColor(ContextCompat.getColor(context, R.color.icon));
+            drawable.setColor(ContextCompat.getColor(context, R.color.colorAccent));
             drawable.setCornerRadius(mBubbleRadius);
 
             view.setBackground(drawable);

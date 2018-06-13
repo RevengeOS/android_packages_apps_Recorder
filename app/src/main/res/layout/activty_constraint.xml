@@ -40,7 +40,7 @@
             android:paddingEnd="16dp"
             android:paddingStart="16dp"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/colorAccent"
             android:textSize="28sp" />
 
         <org.lineageos.recorder.ui.SoundVisualizer
@@ -56,7 +56,7 @@
         android:id="@+id/main_sound_layout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@android:color/generic_bg"
+        android:background="@*android:color/generic_bg"
         app:layout_constraintHeight_default="percent"
         app:layout_constraintHeight_percent="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
