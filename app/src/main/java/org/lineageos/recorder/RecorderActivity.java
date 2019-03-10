@@ -33,6 +33,7 @@ import android.os.IBinder;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -134,6 +135,8 @@ public class RecorderActivity extends AppCompatActivity implements
         bindSoundRecService();
 
         OnBoardingHelper.onBoardScreenSettings(this, mScreenSettings);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
     }
 
     @Override
@@ -304,8 +307,6 @@ public class RecorderActivity extends AppCompatActivity implements
 
             mRecordingText.setText(getString(screenRec ?
                     R.string.screen_recording_message : R.string.sound_recording_title_working));
-            mRecordingLayout.setBackgroundColor(ContextCompat.getColor(this, screenRec ?
-                    R.color.screen : R.color.sound));
             mRecordingVisualizer.setVisibility(screenRec ? View.GONE : View.VISIBLE);
             mScreenFab.setSelected(screenRec);
             mSoundFab.setSelected(!screenRec);
@@ -331,7 +332,6 @@ public class RecorderActivity extends AppCompatActivity implements
         }
 
         updateLastItemStatus();
-        updateSystemUIColors();
 
         TransitionManager.beginDelayedTransition(mConstraintRoot);
         set.applyTo(mConstraintRoot);
@@ -448,23 +448,6 @@ public class RecorderActivity extends AppCompatActivity implements
             mSoundLast.setVisibility(View.VISIBLE);
             OnBoardingHelper.onBoardLastItem(this, mSoundLast, true);
         }
-    }
-
-    private void updateSystemUIColors() {
-        int statusBarColor;
-        int navigationBarColor;
-
-        if (Utils.isRecording(this)) {
-            statusBarColor = ContextCompat.getColor(this, Utils.isScreenRecording(this) ?
-                    R.color.screen : R.color.sound);
-            navigationBarColor = statusBarColor;
-        } else {
-            statusBarColor = ContextCompat.getColor(this, R.color.screen);
-            navigationBarColor = ContextCompat.getColor(this, R.color.sound);
-        }
-
-        getWindow().setStatusBarColor(Utils.darkenedColor(statusBarColor));
-        getWindow().setNavigationBarColor(Utils.darkenedColor(navigationBarColor));
     }
 
     private void clearTransitionNames() {

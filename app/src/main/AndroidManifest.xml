@@ -26,7 +26,6 @@
     <!-- This is needed for aosp build env -->
     <uses-sdk tools:ignore="GradleOverrides" />
 
-
     <application
         android:allowBackup="false"
         android:icon="@drawable/ic_launcher"
