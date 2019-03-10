@@ -15,23 +15,23 @@
 -->
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light">
+    <style name="AppTheme" parent="@style/Theme.AppCompat.DayNight">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:fitsSystemWindows">true</item>
     </style>
 
     <style name="AppTheme.DialogActivity">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="textAllCaps">false</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowContentOverlay">@null</item>
@@ -39,14 +39,14 @@
         <item name="android:windowContentTransitions">true</item>
     </style>
 
-    <style name="AppTheme.RecordTitle">
+    <style name="AppTheme.RecordTitle" parent="@android:style/TextAppearance.DeviceDefault.Widget.Button">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">16dp</item>
         <item name="android:layout_marginRight">16dp</item>
         <item name="android:layout_marginBottom">24dp</item>
         <item name="android:layout_marginLeft">16dp</item>
-        <item name="android:textColor">@color/icon</item>
+        <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">18sp</item>
         <item name="android:maxLines">1</item>
         <item name="android:layout_alignParentBottom">true</item>
@@ -57,7 +57,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">16dp</item>
         <item name="android:stateListAnimator">@animator/lift_on_touch</item>
-        <item name="backgroundTint">@color/white</item>
+        <item name="backgroundTint">@android:color/white</item>
         <item name="android:layout_centerInParent">true</item>
     </style>
 

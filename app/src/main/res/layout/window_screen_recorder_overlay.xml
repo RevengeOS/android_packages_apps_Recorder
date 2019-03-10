@@ -29,7 +29,7 @@
         android:background="@drawable/background_screen_recorder_overlay_main"
         android:padding="12dp"
         android:src="@drawable/ic_action_screen_record"
-        android:tint="@color/white" />
+        android:tint="@android:color/white" />
 
     <org.lineageos.recorder.ui.DragView
         android:id="@+id/overlay_drag"

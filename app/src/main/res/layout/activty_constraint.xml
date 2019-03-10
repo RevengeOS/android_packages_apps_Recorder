@@ -16,9 +16,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_root"
+    android:background="?android:attr/colorBackground"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/sound">
+    android:layout_height="match_parent">
 
     <!-- Is Recording -->
     <RelativeLayout
@@ -26,6 +26,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
+        android:background="@drawable/ic_launcher_background"
         app:layout_constraintHeight_default="percent"
         app:layout_constraintHeight_percent="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -40,7 +41,7 @@
             android:paddingEnd="16dp"
             android:paddingStart="16dp"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@android:color/white"
             android:textSize="28sp" />
 
         <org.lineageos.recorder.ui.SoundVisualizer
@@ -56,7 +57,6 @@
         android:id="@+id/main_sound_layout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/sound"
         app:layout_constraintHeight_default="percent"
         app:layout_constraintHeight_percent="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -69,6 +69,7 @@
 
         <TextView
             style="@style/AppTheme.RecordTitle"
+            android:textColor="?android:attr/textColorPrimary"
             android:text="@string/main_sound_action" />
 
         <ImageView
@@ -86,7 +87,7 @@
         android:id="@id/main_screen_layout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/screen"
+        android:background="@drawable/ic_launcher_background"
         app:layout_constraintHeight_default="percent"
         app:layout_constraintHeight_percent="0.5"
         app:layout_constraintLeft_toLeftOf="parent"

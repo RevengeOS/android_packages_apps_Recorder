@@ -16,14 +16,11 @@
 <resources>
     <color name="colorPrimary">#f8f8f8</color>
     <color name="colorPrimaryDark">#e0e0e0</color>
-    <color name="colorAccent">#167c80</color>
+    <color name="colorAccent">@color/gradient_center</color>
 
-    <color name="white">#fafafa</color>
-    <color name="black">#333333</color>
-
-    <color name="screen">#4e888a</color>
-    <color name="sound">#f19645</color>
-    <color name="icon">#56000000</color>
+    <color name="icon">#35000000</color>
+    <color name="screen">#ff0550</color>
+    <color name="sound">#fafafa</color>
 
     <color name="gradient_start">#12c2e9</color>
     <color name="gradient_center">#c471ed</color>
