@@ -50,6 +50,8 @@ import org.lineageos.recorder.utils.Utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.Thread;
+import java.lang.Runnable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -217,7 +219,12 @@ public class ScreencastService extends Service {
         Intent data = intent.getParcelableExtra(EXTRA_DATA);
         if (data != null) {
             mMediaProjection = mMediaProjectionManager.getMediaProjection(resultCode, data);
-            startRecording();
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    startRecording();
+                }
+            }).start();
         }
         return START_STICKY;
     }
